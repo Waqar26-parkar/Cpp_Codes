@@ -113,10 +113,50 @@ void InsertatanyPosition(node* &tail, node *&head ,int position, int val)
 
 }
 
+//Reverse the linklist
+
+node* Reverselist(node* &head)
+{
+
+    node* curr=head;
+    node* prev=NULL;
+    node* forward=NULL;
+    while(curr!=NULL)
+    {
+       forward=curr->next;
+       curr->next=prev;
+       prev=curr;
+       curr=forward;
+    }
+
+    head = prev;
+    
+    return head;
+
+}
+
+
+//  Reverse the linklist using recursion..
+
+node* Revrsethelinklist_usingrecursion(node* &head)
+{
+    if(head==NULL || head->next==NULL)
+    {
+        return head;
+    }
+
+    node* node2=Revrsethelinklist_usingrecursion(head->next);
+    head->next->next=head;
+    head->next=NULL;
+
+    return node2;
+
+
+}
+
 
 
 // Deleting the node (Deletion)
-
 void deleteionofnode(int position,node* &head)
 {
     //Deleting the node at starting position
@@ -148,7 +188,6 @@ void deleteionofnode(int position,node* &head)
 
         delete curr;
     }
-
 
 }
 
@@ -191,6 +230,15 @@ int main()
 
     deleteionofnode(5,head);  // deleting the node at any position
     printlist(head);
+
+    Reverselist(head);       // Reverse the linklist
+    printlist(head);
+    
+    InsertatanyPosition(tail,head,6,74);  // Inserting at end      (In function at atanyposiiton)
+    printlist(head);
+
+    node* newhead=Revrsethelinklist_usingrecursion(head);  // Reverse the linklist using recursion
+    printlist(newhead);
 
     return 0;
 }
