@@ -200,13 +200,13 @@ int main()
 
     node*node1= new node(10);
 
-    // cout<<node1->data<<endl;
-    // cout<<node1->next;
+      // cout<<node1->data<<endl;
+     // cout<<node1->next;
 
 
-    node*head=node1;
-    node*tail=node1;
-   // node* 
+     node*head=node1;
+     node*tail=node1;
+     // node* 
  
     Insertathead(head,26);   //Inserting at head;
     printlist(head);
