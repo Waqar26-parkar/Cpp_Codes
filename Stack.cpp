@@ -130,7 +130,7 @@ int main() {
 
 
 
-/* -------------DELETE THE MIDDLE ELEMENT OF STACK--------
+/* -------------DELETE THE MIDDLE ELEMENT OF STACK-------- */
 
 
 #include <bits/stdc++.h>
@@ -204,7 +204,7 @@ int main()
 }
 
 
-
+/*
 Output:
 
 Enter the number of elements in the stack: 5
@@ -215,12 +215,11 @@ Enter the elements of the stack: 1
 5
 Original stack: 5 4 3 2 1
 Stack after deleting the middle element: 5 4 2 1
-
-
-
-
-
 */
+
+
+
+
 
 
 
