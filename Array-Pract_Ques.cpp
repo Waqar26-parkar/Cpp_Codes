@@ -284,12 +284,48 @@ int main()
 
 
 
+
+
+// -- Replace every array element by multiplication of previous and next
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
 
-int main()
+void multipliaction_arry(int arr[], int n)
 {
 
+    int prev=arr[0];
+    arr[0]=arr[0]*arr[1];
+    for(int i=0; i<n-1; i++)
+    {
+        int curr=arr[i];
+        arr[i]=prev*arr[i+1];
+        prev=curr;
     
+    }
+    arr[n-1]=prev*arr[n-1];
+}
+
+int main()
+{
+   int n;
+   cin>>n;
+
+   int arr[n];
+   for(int i=0; i<n; i++)
+   {
+    cin>>arr[i];
+   }
+
+   multipliaction_arry(arr,n);
+
+   for(int i=0; i<n; i++)
+   {
+    cout<<arr[i]<<" ";
+   }
+
+   return 0;
 }
