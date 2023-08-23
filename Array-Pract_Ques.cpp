@@ -135,7 +135,7 @@ SC= O(n)
 // Reversed the string source code----------
 
 
-
+/*
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -157,6 +157,7 @@ string ReversedtheString(const string& str)
 }
 
 
+
 int main()
 {
     string str;
@@ -169,3 +170,64 @@ int main()
 
     return 0;
 }
+
+
+TC = O(1)
+SC= O(n)
+
+
+
+*/
+
+
+
+
+
+
+// ----Checking string is Plaindrome or not
+
+
+
+/*
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int palindrome(int n)
+{
+    int rev=0;
+    int orig=n;
+
+    while(n!=0)
+    {
+        rev=(rev*10)+(n%10);
+        n=n/10;
+    }
+    
+    return orig=rev;
+
+}
+
+int main()
+{
+
+
+    
+    int n;
+    cin>>n;
+
+    if (palindrome(n)) // Call the function and check its return value
+    {
+        cout << "The number is a palindrome: " << n << endl;
+    }
+    else
+    {
+        cout << "It's not a palindrome: " << n << endl;
+    }
+
+
+}
+
+
+*/
