@@ -58,6 +58,7 @@
   "files.associations": {
     "MLTable": "yaml",
     "*.py": "python",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "ostream": "cpp"
   }
 }
