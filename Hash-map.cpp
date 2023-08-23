@@ -1,5 +1,7 @@
 // ------- Hash -Code --------
 
+/*
+
 #include <bits/stdc++.h>
 #include <unordered_map>
 using namespace std;
@@ -56,6 +58,69 @@ int main()
    }
 
    //NOTE  If we are using unordered map then the output also print in unordered format..
+
+    return 0;
+}
+
+
+
+
+*/
+
+
+
+
+
+
+// -----------Unordered Map-------------
+
+
+
+
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main()
+{
+    map<string, int> m;      // Creating a map (ordered map)
+
+    m["waqar"] = 4;   // Direct insertion in map
+    m["farooqui"] = 3;
+    m["jimmy"] = 2;
+
+    // Search and print the value associated with the key "farooqui"
+    cout << m["farooqui"] << endl;
+    cout << m["waqar"] << endl;
+    cout << m["jimmy"] << endl;
+
+    cout << m["invalid"] << endl;  // It will create an entry of Zero.
+
+    cout << m.size() << endl;  // It will return the size of the map
+
+    cout << m.count("waqar") << endl;  // It will count how many times "waqar" has occurred
+
+    m.erase("jimmy");  // Erase the entry with key "jimmy"
+
+    cout << m["jimmy"] << endl;  // Check whether successfully erased or not (output should be 0)
+
+    // Printing the elements of the map using range-based for loop
+    for (auto i : m)
+    {
+        cout << i.first << " " << i.second << endl;
+    }
+
+    // Using iterator to traverse the map
+    cout << " " << endl;
+    map<string, int>::iterator it = m.begin();
+
+    while (it != m.end())
+    {
+        cout << it->first << " " << it->second << endl;
+        it++;
+    }
+
+    // Output will be sorted based on keys since we are using std::map.
 
     return 0;
 }
