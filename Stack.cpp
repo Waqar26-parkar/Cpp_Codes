@@ -132,7 +132,7 @@ int main() {
 
 /* -------------DELETE THE MIDDLE ELEMENT OF STACK-------- */
 
-
+/*
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -203,6 +203,8 @@ int main()
     return 0;
 }
 
+
+*/
 
 /*
 Output:
