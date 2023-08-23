@@ -233,12 +233,51 @@ int main()
 */
 
 
+
+
+
+// -------Finding the kth largest elements in descending order----------- 
+
+/*
 #include <bits/stdc++.h>
 using namespace std;
 
-
 int main()
 {
-
+    int n;
+    cin >> n;
    
+    int arr[n];
+
+    for(int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+
+    int k;
+    cin >> k;
+
+    sort(arr, arr + n);
+
+    // You should start from n - k to get the correct indices
+    for(int i = 0; i < k; i++)
+    {
+        cout << arr[n - i - 1] << endl;
+    }
+
+    return 0;
 }
+
+*/
+
+
+
+/*Explain Output
+6   // user input of array size
+12 45 7 23 98 60  // taking array value
+3     // value of K how biggest have to find
+
+98
+60  // output value... 
+45
+*/
