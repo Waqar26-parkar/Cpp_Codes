@@ -36,5 +36,26 @@ int main()
     cout<<m.erase("jimmy")<<endl;  // It will erase the jimmy entry 
 
     cout<<m["jimmy"]<<endl;  // --check wheather successfully earse or not-----
+
+    // One way to printing the element of Map
+    for(auto i:m)
+    {
+        cout<<i.first<<" "<<i.second<<endl;
+    }
+ 
+
+
+   // Lets use the Iterator  to Traverse one by one in map
+   cout<<" "<<endl;
+   unordered_map<string, int> :: iterator it = m.begin();
+   
+   while(it!=m.end())
+   {
+    cout<<it->first<<" "<<it->second<<endl;
+    it++;
+   }
+
+   //NOTE  If we are using unordered map then the output also print in unordered format..
+
     return 0;
 }
