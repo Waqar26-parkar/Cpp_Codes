@@ -1,9 +1,5 @@
 // ------- Hash -Code --------
 
-
-
-
-//-----------Unordered Map------------
 /*
 
 #include <bits/stdc++.h>
@@ -76,7 +72,7 @@ int main()
 
 
 
-// -----------Ordered Map-------------
+// -----------Unordered Map-------------
 
 
 
@@ -188,6 +184,8 @@ int main() {
 
 //  ---------------Checking the Subset array inside the Array--------------
 
+
+/*
 #include <bits/stdc++.h>
 #include <unordered_map>
 using namespace std;
@@ -260,3 +258,68 @@ int main()
 }
 
 
+*/
+
+
+
+
+
+
+//---------Maximum Distance of same element in an array---------
+
+/*
+#include <bits/stdc++.h>
+#include<unordered_map>
+using namespace std;
+
+
+int Max_Distance_element(int n , int arr[])
+{ 
+
+    unordered_map<int,int> mp;
+
+    int max_dis=0;
+
+    for(int i=0; i<n; i++)
+    {
+       if(mp.find(arr[i])==mp.end())
+       {
+        mp[arr[i]]=i;
+       }
+
+       else{
+        max_dis=i-mp[arr[i]];
+       }
+    }
+
+    return max_dis;
+
+}
+
+int main()
+{
+
+    int n;
+    cin>>n;
+    int arr[n]; 
+
+    for(int i=0; i<n; i++)
+    {
+
+        cin>>arr[i];
+    }
+
+    cout<<Max_Distance_element(n,arr);
+
+    return 0;
+
+}
+
+
+*/
+
+//Output
+
+// 5
+// 1 2 2 3 1
+// 4
