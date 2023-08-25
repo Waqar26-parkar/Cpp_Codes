@@ -331,6 +331,7 @@ int main()
 //-----Basically this code will checks the minimum occurence in both the array then it wil Print the minimum occurence number....
 
 
+/*
 #include <bits/stdc++.h>
 #include <unordered_map>
 using namespace std;
@@ -389,5 +390,14 @@ int main()
 }
 
 
+*/
 
+
+// Output
+
+// 6
+// 1 2 3 3 5 2
+// 4
+// 2 6 7 3   
+// 2
 
