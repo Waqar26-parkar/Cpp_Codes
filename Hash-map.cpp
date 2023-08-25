@@ -77,6 +77,7 @@ int main()
 
 
 
+/*
 #include <iostream>
 #include <map>
 using namespace std;
@@ -87,7 +88,7 @@ int main()
 
     m["waqar"] = 4;   // Direct insertion in map
     m["farooqui"] = 3;
-    m["jimmy"] = 2;
+    m["jimmy"] = 1;
 
     // Search and print the value associated with the key "farooqui"
     cout << m["farooqui"] << endl;
@@ -124,3 +125,134 @@ int main()
 
     return 0;
 }
+
+
+*/
+
+
+
+
+
+// -----------Print the number that have maximum Frequency ----------
+
+
+/*
+#include <bits/stdc++.h>
+#include <unordered_map>
+using namespace std;
+
+int Max_freq(int arr[], int n) {
+    int maxfr = 0;
+    int maxans = 0;
+    unordered_map<int, int> m;
+
+    for (int i = 0; i < n; i++) {
+        m[arr[i]]++;
+        maxfr = max(maxfr, m[arr[i]]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (m[arr[i]] == maxfr) {
+            maxans = arr[i];
+            break;
+        }
+    }
+
+    return maxans;
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    int arr[n];
+
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    cout << Max_freq(arr, n);
+}
+
+
+*/
+
+
+
+
+
+
+//  ---------------Checking the Subset array inside the Array--------------
+
+#include <bits/stdc++.h>
+#include <unordered_map>
+using namespace std;
+
+
+void PrintArray(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+int Suset_Array(int n, int arr[], int n1, int arr1[])
+{
+
+    unordered_map<int,int> mp;
+
+    for(int i=0; i<n; i++)
+    {
+        mp[arr[i]]=i;
+    }
+
+    int subsetArr[n1];
+    int subsetIndex = 0;
+
+    for(int i=0; i<n1; i++)
+    {
+        if(mp.find(arr1[i])==mp.end())
+        {
+            return -1;
+        }
+        subsetArr[subsetIndex++] = arr1[i];
+    }
+  
+    cout << "Subset array: ";
+    PrintArray(subsetArr, n1);
+   
+    return 1;
+
+}
+
+
+
+
+
+int main()
+{
+
+    int n;
+    cin>>n;
+    int arr[n];
+
+    for(int i=0; i<n; i++)
+    {
+        cin>>arr[i];
+    }
+
+
+    int n1;
+    cin>>n1;
+
+    int arr1[n1];
+
+    for(int i=0; i<n1; i++)
+    {
+        cin>>arr1[i];
+    }
+
+    cout<<Suset_Array(n,arr,n1,arr1);
+}
+
+
