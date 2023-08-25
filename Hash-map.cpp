@@ -323,3 +323,71 @@ int main()
 // 5
 // 1 2 2 3 1
 // 4
+
+
+
+//----------- Remove the minimum number of count---------
+
+//-----Basically this code will checks the minimum occurence in both the array then it wil Print the minimum occurence number....
+
+
+#include <bits/stdc++.h>
+#include <unordered_map>
+using namespace std;
+
+int Removeminimum_number(int n, int arr[], int n1, int arr1[] )
+{
+    unordered_map<int,int> mp,mp1;
+    for(int i=0; i<n; i++)
+    {
+        mp[arr[i]]++;
+    }
+
+        for(int i=0; i<n1; i++)
+    {
+        mp1[arr1[i]]++;
+    }
+
+    int ans=0;
+
+    for(auto it:mp)
+    {
+        if(mp1.find(it.first)!=mp1.end())
+        {
+            ans+=min(it.second,mp1[it.first]);
+
+        }
+    }
+    return ans;
+}
+
+
+int main()
+{
+
+ int n;
+    cin>>n;
+    int arr[n];
+
+    for(int i=0; i<n; i++)
+    {
+        cin>>arr[i];
+    }
+
+
+    int n1;
+    cin>>n1;
+
+    int arr1[n1];
+
+    for(int i=0; i<n1; i++)
+    {
+        cin>>arr1[i];
+    }
+
+    cout<<Removeminimum_number(n,arr,n1,arr1);
+}
+
+
+
+
