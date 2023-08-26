@@ -401,3 +401,54 @@ int main()
 // 2 6 7 3   
 // 2
 
+
+
+
+
+// -----------Largest subaraay with sum 0 [zero]----------
+
+/*
+
+#include <bits/stdc++.h>
+#include <unordered_map>
+using namespace std;
+
+int subarrayZeroSum(int n, int arr[]) {
+    unordered_map<int, int> mp;
+
+    int sum = 0;
+    int ans = 0;
+    mp[0] = -1;
+
+    for (int i = 0; i < n; i++) {
+        sum += arr[i];
+        if (mp.find(sum) != mp.end()) {
+            ans = max(ans, i - mp[sum]);
+        } else {
+            mp[sum] = i; // Store the current index where the sum was first seen
+        }
+    }
+    return ans;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    int arr[n];
+
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    cout << subarrayZeroSum(n, arr);
+
+    return 0;
+}
+
+
+*/
+
+// output
+// 6
+// 3 -1 -1 4 2 -2
+// 2
