@@ -289,6 +289,7 @@ int main()
 // -- Replace every array element by multiplication of previous and next
 
 
+/*
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -330,3 +331,5 @@ int main()
    return 0;
 }
 
+
+*/
