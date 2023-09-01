@@ -333,3 +333,56 @@ int main()
 
 
 */
+
+
+
+
+// -----print the count of any number that how many times its present in the array--------
+
+
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int mostoccurelement(int arr[], int n, int k)
+{
+    int res=0;
+
+    for(int i=0; i<n; i++){
+
+        if(k==arr[i])
+        {
+            res++;
+        }
+        
+    }
+    return res;
+}
+
+
+int main()
+{
+   int n;
+   cin>>n;
+   int arr[n];
+   for(int i=0; i<n;i++)
+   {
+       cin>>arr[i];
+   }
+   
+int k;
+cout<<"enter the most occuring element:\n";
+cin>>k;
+
+
+cout<<mostoccurelement(arr,n,k);
+
+return 0;
+}
+
+
+*/
+
+
+
