@@ -386,3 +386,125 @@ return 0;
 
 
 
+// ----Move all Zero the end of the array--------
+
+
+
+/*
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void MoveallZero(int arr[], int n){
+
+    int left=0;
+
+    for(int i=0; i<n; i++)
+    {
+
+        if(arr[i]!=0)
+        {
+        arr[left]=arr[i];
+        left++;
+        }
+    }
+
+    while(left<n)
+    {
+        arr[left]=0;
+        left++;
+    }
+
+
+}
+
+
+
+int main()
+{
+	int n;
+	cin>>n;
+	
+	int arr[n];
+	
+	for(int i=0; i<n; i++)
+	{
+		cin>>arr[i];
+	}
+	
+	MoveallZero(arr,n);
+	
+	for(int i=0; i<n; i++)
+	{
+		cout<<arr[i]<<" ";
+	}
+	cout << endl;
+	return 0;
+}
+
+*/
+
+/*
+8
+1
+0
+3
+5
+0
+45
+0
+0
+1 3 5 45 0 0 0 0 
+
+*/
+
+
+
+
+
+//-----------Largest sum contiguous array-------------
+
+
+#include <bits/stdc++.h>
+using  namespace std;
+
+int largestsumcontiguous(int arr[], int n)
+{
+
+    int currentsum=0;
+    int maxsum=0;
+
+    for(int i=0; i<n; i++)
+    {
+        currentsum+=arr[i];
+
+        if(currentsum>maxsum)
+        {
+            maxsum=currentsum;
+        }
+
+        if (currentsum < 0) {
+            currentsum = 0;
+        }
+    }
+
+    return maxsum;
+
+}
+
+
+int main()
+{
+    int n;
+    cin>>n;
+
+    int arr[n];
+    for(int i=0; i<n; i++)
+    {
+        cin>>arr[i];
+    }
+
+    cout<<largestsumcontiguous(arr,n);
+}
+
+
