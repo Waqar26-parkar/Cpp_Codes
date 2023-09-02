@@ -465,6 +465,8 @@ int main()
 //-----------Largest sum contiguous array-------------
 
 
+
+/*
 #include <bits/stdc++.h>
 using  namespace std;
 
@@ -506,5 +508,96 @@ int main()
 
     cout<<largestsumcontiguous(arr,n);
 }
+
+
+*/
+
+/* Output
+
+8
+-2
+-3
+4
+-1
+-2
+1
+5
+-3
+
+7
+
+*/
+
+
+
+// -----Sort an array in an wave form-----------
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+
+void swap(int &x, int &y)
+{
+    int temp=x;
+    x=y;
+    y=temp;
+}
+void waveform(int arr[], int n)
+{
+
+    sort(arr,arr+n);
+
+
+    for(int i=0; i<n-1; i+=2)
+    {
+
+     swap(arr[i], arr[i+1]);
+    }
+
+
+    for(int i=0; i<n; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+
+
+}
+
+
+int main()
+{
+
+    int n;
+    cin>>n;
+
+    int arr[n];
+
+    for(int i=0; i<n; i++)
+    {
+        cin>>arr[i];
+
+    }
+
+    waveform(arr,n);
+}
+
+
+/* Output
+
+8
+1
+22
+26
+5
+56
+34
+28
+7
+5 1 22 7 28 26 56 34 
+*/
+
 
 
