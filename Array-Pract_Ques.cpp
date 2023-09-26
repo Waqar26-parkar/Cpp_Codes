@@ -534,6 +534,8 @@ int main()
 
 
 
+/*
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -584,6 +586,8 @@ int main()
     waveform(arr,n);
 }
 
+
+*/
 
 /* Output
 
