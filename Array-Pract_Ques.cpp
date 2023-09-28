@@ -533,7 +533,7 @@ int main()
 // -----Sort an array in an wave form-----------
 
 
-
+/*
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -584,7 +584,7 @@ int main()
     waveform(arr,n);
 }
 
-
+*/
 /* Output
 
 8
