@@ -650,3 +650,74 @@ int main()
 
 
 */
+
+
+
+
+
+/*  Move all zero to the end of the array*/
+
+
+
+/*
+#include <iostream>
+using namespace std;
+
+void moveZerosToEnd(int arr[], int n) {
+    int left = 0;       // Left pointer to track non-zero elements
+    int right = 0;      // Right pointer to iterate through the array
+
+    while (right < n) {
+          // If the current element is not zero, move it to the left pointer position
+        if (arr[right] != 0) {
+            swap(arr[left], arr[right]);
+            left++;
+        }
+        right++;
+    }
+}
+
+int main() {
+    int n;
+    cout << "Enter the number of elements: ";
+    cin >> n;
+
+    int arr[n];
+    cout << "Enter the elements of the array: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    moveZerosToEnd(arr, n);
+
+    cout << "Array after moving zeros to the end: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    
+    return 0;
+}
+
+*/
+
+
+
+
+/*
+output:
+Enter the number of elements: 8
+Enter the elements of the array: 0 1 0 3 12 0 0 5
+
+Array after moving zeros to the end: 1 3 12 5 0 0 0 0
+*/
+
+
+
+
+/*   */
+
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+
