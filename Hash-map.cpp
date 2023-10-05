@@ -133,7 +133,7 @@ int main()
 
 
 
-// -----------Print the number that have maximum Frequency ----------
+// -----------Print the number that  only have maximum Frequency ----------
 
 
 /*
