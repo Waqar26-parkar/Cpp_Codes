@@ -23,6 +23,8 @@ int main()
 
     }
 
+
+
     if(check==2)
     {
         cout<<"this is prime num:"<<n<<endl;
@@ -59,6 +61,16 @@ void printFibonacci(int n, int a = 0, int b = 1)
 
     printFibonacci(n - 1, b, a + b);
 }
+
+
+
+// int fibonacci(int n) {
+//     if (n <= 1) {
+//         return n;
+//     } else {
+//         return fibonacci(n - 1) + fibonacci(n - 2);   Use this Alternate code for same 
+//     }
+// }
 
 int main()
 {
