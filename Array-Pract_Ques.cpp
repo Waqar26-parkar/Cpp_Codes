@@ -219,6 +219,18 @@ int palindrome(int n)
 
 }
 
+
+
+// // Use this Logic for Plaindrome
+// Bool Palindrome(int number)
+// {
+//     string strnum=to_string(number);
+//    string  reversed=string(strnum.rbegin(), strnum.rend());
+//    int revsnum=stoi(reversed);
+
+//    return number==revsnum;
+//    }
+
 int main()
 {
 
