@@ -65,6 +65,13 @@ void printlist(node* &head){
 void Insertattail(node* &tail, int val)
 {
     node* temp=new node(val);
+    
+    if (tail == NULL)
+    {
+        tail = temp;
+        return;
+    }
+    
     tail->next=temp;
     tail=temp;
 
